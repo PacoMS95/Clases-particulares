@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<empresaVuelo>
+	<pasajero numeroPasaporte="">
+		<nombre></nombre>
+		<direccion></direccion>
+		<numeroTarjetaCredito></numeroTarjetaCredito>
+		<vueloTomado id="" numeroAsientos="" fecha=""></vueloTomado>
+	</pasajero>
+</empresaVuelo>
+<!-- Para evitar que un usuario agregue datos que no se correspondan a los 
+	requirimientos anteriores, necesitaríamos una especie de plantilla que defina 
+	qué vale y qué no vale introducir en el documento XML -->

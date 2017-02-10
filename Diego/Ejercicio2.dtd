@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE empresaVuelo [
+<!ELEMENT empresaVuelo (pasajero*)>
+<!ELEMENT pasajero (nombre+, direccion+, numeroTarjetaCredito+, vueloTomado+)>
+<!ELEMENT nombre (#PCDATA)
