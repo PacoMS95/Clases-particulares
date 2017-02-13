@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE empresaVuelo [
-<!ELEMENT empresaVuelo (pasajero*)>
-<!ELEMENT pasajero (nombre+, direccion+, numeroTarjetaCredito+, vueloTomado+)>
-<!ELEMENT nombre (#PCDATA)
+<!ELEMENT empresaVuelo (pasajero*, aeropuerto*)>
+<!ELEMENT pasajero (nombre, direccion, numeroDePasaporte, vueloTomado)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT direccion (#PCDATA)>
+<!ELEMENT numeroDePasaporte (#PCDATA)>
+<!ELEMENT vueloTomado (#PCDATA)>
+<!ELEMENT aeropuerto (nombreAeropuerto, tasas)>
+<!ELEMENT nombreAeropuerto (#PCDATA)>
+<!ELEMENT tasas (tasa*)>
+<!ELEMENT tasa (#PCDATA)>
+
+<!ATTLIST pasajero numeroTarjetaCredito CDATA #REQUIRED>
+<!ATTLIST vueloTomado id CDATA #REQUIRED>
+<!ATTLIST vueloTomado numeroAsientos CDATA #REQUIRED>
+<!ATTLIST vueloTomado fecha CDATA #REQUIRED>
+<!ATTLIST aeropuerto codigo CDATA #REQUIRED>
+<!ATTLIST tasa id CDATA #REQUIRED>

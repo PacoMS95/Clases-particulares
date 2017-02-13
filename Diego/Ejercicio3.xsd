@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="empresaVuelo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="pasajero"/>
+        <xs:element ref="aeropuerto"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="pasajero">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="nombre"/>
+        <xs:element ref="direccion"/>
+        <xs:element ref="numeroDePasaporte"/>
+        <xs:element ref="vueloTomado"/>
+      </xs:sequence>
+      <xs:attribute name="numeroTarjetaCredito" use="required" type="xs:long"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nombre">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="direccion">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="numeroDePasaporte">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="vueloTomado">
+    <xs:complexType>
+      <xs:attribute name="fecha" use="required"/>
+      <xs:attribute name="id" use="required" type="xs:integer"/>
+      <xs:attribute name="numeroAsientos" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="aeropuerto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="nombreAeropuerto"/>
+        <xs:element ref="tasas"/>
+      </xs:sequence>
+      <xs:attribute name="codigo" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nombreAeropuerto">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="tasas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tasa" maxOccurs ="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="tasa">
+    <xs:complexType>
+      <xs:attribute name="id" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
